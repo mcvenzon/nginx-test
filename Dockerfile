@@ -16,10 +16,11 @@ RUN apt-get update && apt-get install -y \
 
 # Set the working directory
 WORKDIR /var/www/html
+
 COPY . .
 
-RUN chown -R www-data:www-data /var/www/app \
-    && chmod -R 775 /var/www/app/storage
+RUN chown -R www-data:www-data /var/www/html \
+    && chmod -R 775 /var/www/html/storage
 
 
 # install composer
