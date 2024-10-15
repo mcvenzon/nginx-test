@@ -15,8 +15,8 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip
 
 # Set the working directory
-COPY . /var/www/app
-WORKDIR /var/www/app
+WORKDIR /var/www/html
+COPY . .
 
 RUN chown -R www-data:www-data /var/www/app \
     && chmod -R 775 /var/www/app/storage
