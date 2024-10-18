@@ -27,8 +27,8 @@ services:
     container_name: php
     restart: unless-stopped
     tty: true
-    expose:
-      - "9000"
+    ports:
+      - "9000:9000"
     volumes:
       - ./app:/var/www/html
     networks:
