@@ -28,7 +28,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "9000:9000"
+      - "9001:9001"
     volumes:
       - ./app:/var/www/html
     networks:
