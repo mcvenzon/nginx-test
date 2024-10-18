@@ -30,5 +30,8 @@ COPY --from=composer:2.6.5 /usr/bin/composer /usr/local/bin/composer
 COPY composer.json ./
 RUN composer install
 
+# Expose the port
+EXPOSE 9001
+
 # Set the default command to run php-fpm
 CMD ["php-fpm"]
